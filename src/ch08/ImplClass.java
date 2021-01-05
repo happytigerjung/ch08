@@ -4,19 +4,19 @@ public class ImplClass implements Inter {
 
 	@Override
 	public void method1() {
-		// TODO Auto-generated method stub
+		System.out.println("하이요");
 
 	}
 
 	@Override
 	public void method2() {
-		// TODO Auto-generated method stub
+		System.out.println("안녕요");
 
 	}
 
 	@Override
 	public void method3() {
-		// TODO Auto-generated method stub
+		System.out.println("수고요");
 
 	}
 
