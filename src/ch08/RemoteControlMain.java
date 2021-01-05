@@ -37,17 +37,20 @@ public class RemoteControlMain {
 		System.out.println("\n==========익명 구현 객체 사용==========\n");
 		
 		RemoteControl rc1 = new RemoteControl() {
-			private int volume;
+			private int volume; //클래스 멤버 변수
 			
+			@Override
 			public void turnOn() {
 				System.out.println("전원을 켭니다.");
 			}
 
+			@Override
 			public void turnOff() {
 				System.out.println("전원을 끕니다.");
 				
 			}
 
+			@Override
 			public void setVolume(int volume) {
 				if(volume > RemoteControl.MAX_VOLUME) {
 				   volume = RemoteControl.MAX_VOLUME;
