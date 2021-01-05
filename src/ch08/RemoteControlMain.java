@@ -33,7 +33,67 @@ public class RemoteControlMain {
 		rc.setMute(false);
 		rc.setVolume(8);
 		rc.turnOff();
+		
+		System.out.println("\n==========익명 구현 객체 사용==========\n");
+		
+		RemoteControl rc1 = new RemoteControl() {
+			private int volume;
+			
+			public void turnOn() {
+				System.out.println("전원을 켭니다.");
+			}
+
+			public void turnOff() {
+				System.out.println("전원을 끕니다.");
+				
+			}
+
+			public void setVolume(int volume) {
+				if(volume > RemoteControl.MAX_VOLUME) {
+				   volume = RemoteControl.MAX_VOLUME;
+					}
+					else if(volume < RemoteControl.MIN_VOLUME) {
+						    volume = RemoteControl.MIN_VOLUME;
+					}
+					else {
+						this.volume = volume;
+					}
+					System.out.println("현재 볼륩은 :"+this.volume);
+				}
+			
+		};
+		
+		rc1.turnOn();
+		rc1.setVolume(10);
+		rc1.setMute(true);
+		rc1.turnOff();
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
